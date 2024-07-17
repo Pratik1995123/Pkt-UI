@@ -4,6 +4,7 @@ import whatsapp from "../../assets/whatsapp.png";
 import call from "../../assets/call.png";
 import "./Home.scss";
 import { URL } from "../../constants";
+import Loader from "../Loader";
 
 import { toast } from "react-toastify";
 
@@ -19,10 +20,12 @@ const Section = ({ children, title }) => {
 const Home = () => {
   const [data, setData] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
+    setLoading(true);
     try {
-      toast.info("Loading Data...", { autoClose: false });
+
       const dateObject = new Date();
       const year = dateObject.getFullYear();
       const month = String(dateObject.getMonth() + 1).padStart(2, "0");
@@ -47,6 +50,7 @@ const Home = () => {
       toast.dismiss();
       toast.error("Server Error");
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -67,12 +71,13 @@ const Home = () => {
         </div>
       </div>
       <div className="flex-grow">
+        {loading && <Loader />}
         {data.map((x) => (
           <Section title={x.title.toUpperCase()} key={x._id}>
             Rs. {x.cost}
           </Section>
         ))}
-        {data.length === 0 && <Section title="No Data" />}
+        {!loading && data.length === 0 && <Section title="No Data" />}
       </div>
     </div>
   );
