@@ -15,6 +15,11 @@ const router = createBrowserRouter([
     path: "/form",
     element: <FormComponent />,
   },
+  {
+    // for other show Home component
+    path: "*",
+    element: <Home />,
+  }
 ]);
 
 function App() {
