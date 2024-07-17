@@ -15,6 +15,7 @@ function App() {
       />
       <div className="container">
         <Home />
+        {/* <FormComponent /> */}
         <Footer />
       </div>
     </>

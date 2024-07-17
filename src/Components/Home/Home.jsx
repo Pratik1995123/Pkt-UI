@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import banner from "../../assets/banner.png";
 import whatsapp from "../../assets/whatsapp.png";
+import refresh from '../../assets/refresh-button.png';
 import call from "../../assets/call.png";
 import "./Home.scss";
 import { URL } from "../../constants";
@@ -62,6 +63,7 @@ const Home = () => {
       <img className="icon" src={banner} alt="Banner" />
       <div className="wrapper">
         <div className="img-container">
+            <img onClick={fetchData} className="social-icon"  src={refresh} alt="" />
           <a href="https://wa.me/9284044001">
             <img className="social-icon" src={whatsapp} alt="WhatsApp" />
           </a>
