@@ -20,11 +20,12 @@
   margin: 8px 0;
   font-size: 20px;
   width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 .date-selector {
   margin: 10px auto;
-  color: black;
 }
 
 .clear-button {
@@ -35,22 +36,25 @@
   margin-bottom: 8px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .add-button {
-  background-color: blue;
-  color: white;
+  background-color: rgb(118, 118, 255);
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .submit-button {
-  background-color: #00c500;
-  color: white;
+  background-color: #9dff9d;
+  color: rgb(0, 0, 0);
   border: none;
+  font-weight: bold;
   padding: 10px;
   margin: 10px 0;
   cursor: pointer;
@@ -63,4 +67,8 @@
   font-weight: bold;
   color: #a4ff4a;
   text-align: center;
+}
+
+.cont{
+  margin: 1rem;
 }

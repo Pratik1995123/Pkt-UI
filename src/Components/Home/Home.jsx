@@ -74,7 +74,7 @@ const Home = () => {
       </div>
       <div className="flex-grow">
         {loading && <Loader />}
-        {data.map((x) => (
+        {!loading && data.map((x) => (
           <Section title={x.title.toUpperCase()} key={x._id}>
             Rs. {x.cost}
           </Section>

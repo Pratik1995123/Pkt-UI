@@ -4,6 +4,18 @@ import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import "react-toastify/dist/ReactToastify.css";
 import FormComponent from "./Components/FormComponent/FormComponent";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/form",
+    element: <FormComponent />,
+  },
+]);
 
 function App() {
   return (
@@ -14,8 +26,7 @@ function App() {
         className={"toast-container"}
       />
       <div className="container">
-        <Home />
-        {/* <FormComponent /> */}
+        <RouterProvider router={router} />
         <Footer />
       </div>
     </>

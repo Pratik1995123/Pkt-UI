@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import { toast } from 'react-toastify';
 import { URL } from '../../constants';
 import './FormComponent.scss';
+import "react-datepicker/dist/react-datepicker.css";
 
 const FormComponent = () => {
   const [items, setItems] = useState([
@@ -97,7 +98,7 @@ const FormComponent = () => {
   );
 
   return (
-    <div className="container">
+    <div className="cont">
       <h1 className="title">Submit Data</h1>
 
       <input
@@ -108,7 +109,7 @@ const FormComponent = () => {
         onChange={e => setPass(e.target.value)}
       />
       <DatePicker
-        className="date-selector"
+        className="date-selector input"
         selected={date}
         onChange={(date) => setDate(date)}
       />
