@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.form-item {
+  margin-bottom: 16px;
+  color: black;
+  background-color: #222222;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.input {
+  border: 1px solid #5a5a5a;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 20px;
+  width: 100%;
+}
+
+.date-selector {
+  margin: 10px auto;
+  color: black;
+}
+
+.clear-button {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #00c500;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #a4ff4a;
+  text-align: center;
+}
